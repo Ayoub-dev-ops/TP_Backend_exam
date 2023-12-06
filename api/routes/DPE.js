@@ -8,5 +8,6 @@ router.put('/:id', dpeControler.update);
 router.delete('/:id', dpeControler.delete);
 router.post('/', dpeControler.create);
 router.get('/', dpeControler.search);
+router.get('/all', dpeControler.getAllResearch);
 
 module.exports = router;

@@ -48,3 +48,12 @@ exports.search = (req, res, next) => {
       return res.status(200).json(data);
     });
   }
+
+  //fonction qui liste toutes les recherches faites
+  exports.getAllResearch = (req, res, next) => {
+    debug('liste de toutes les recherches');
+    Service.getAllMaison((err, data) => { 
+      if (err) return next(err);
+      return res.status(200).json(data);
+    });
+  }
