@@ -7,9 +7,9 @@ Développement d'une API permettant à un utilisateur de rechercher des maisons 
 - [x] Créer un compte avec son nom, son email et un mot de passe. 
 - [x] Se connecter avec son email et son mot de passe
 - [X] Générer un token
-- [ ] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
-- [ ] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
-- [ ] Supprimer un résultat de recherche
+- [X] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
+- [X] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
+- [X] Supprimer un résultat de recherche
 - [ ] Relancer une recherche déjà effectué
 
 ## Mise en place du projet
