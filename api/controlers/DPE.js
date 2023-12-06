@@ -16,3 +16,35 @@ exports.search = (req, res, next) => {
       return res.status(200).json(data);
     });
   };
+
+  exports.getOne = (req, res, next) => {
+    debug('recherche de maison');
+    Service.getMaison(req.params.id,(err, data) => { 
+      if (err) return next(err);
+      return res.status(200).json(data);
+    });
+  }
+
+  exports.create = (req, res, next) => {
+    debug('création de maison');
+    Service.createMaison(req.body,(err, data) => { 
+      if (err) return next(err);
+      return res.status(201).json(data);
+    });
+  }
+
+  exports.update = (req, res, next) => {
+    debug('mise à jour de maison');
+    Service.updateMaison(req.params.id, req.body,(err, data) => { 
+      if (err) return next(err);
+      return res.status(200).json(data);
+    });
+  }
+
+  exports.delete = (req, res, next) => {
+    debug('suppression de maison');
+    Service.deleteMaison(req.params.id,(err, data) => { 
+      if (err) return next(err);
+      return res.status(200).json(data);
+    });
+  }

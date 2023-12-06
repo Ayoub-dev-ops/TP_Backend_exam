@@ -4,6 +4,18 @@ const jwt = require('jsonwebtoken');
 const Services = require('../../services/auth');
 const UserServices = require('../../services/users');
 
+exports.register = async (req, res, next) => {
+  var user = await UserServices.getUser(req.body?.email);
+  if (user != undefined) {
+    return res.status(409).send('email déjà utilisé');
+  }
+  user = await UserServices.createUser(req.body);
+  if (user == undefined) {
+    return res.status(500).send('erreur lors de la création du compte');
+  }
+  return res.status(201).send('compte créé');
+}
+
 exports.login = async (req, res, next) => {
 
   var user = await UserServices.getUser(req.body?.email);
